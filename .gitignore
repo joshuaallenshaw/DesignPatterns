@@ -4,6 +4,7 @@
 *.pidb
 *.DS_Store
 *.userprefs
+.vs/
 [Tt]est[Rr]esults
 [Oo]bj/
 [Bb]in/

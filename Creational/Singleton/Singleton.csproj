@@ -35,8 +35,11 @@
   <ItemGroup>
     <Compile Include="DoublecheckSingleton.cs" />
     <Compile Include="LazySingleton.cs" />
+    <Compile Include="NestedLazySingleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleSingleton.cs" />
+    <Compile Include="TooSimpleSingleton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
