@@ -5,21 +5,21 @@ using System;
 
 namespace Singleton
 {
-    public sealed class SimpleSingleton
+    public sealed class SimpleEagerSingleton
     {
-        private static readonly SimpleSingleton instance = new SimpleSingleton();
+        private static readonly SimpleEagerSingleton instance = new SimpleEagerSingleton();
 
         // The static constructor prevents the beforefieldinit flag
-        static SimpleSingleton()
+        static SimpleEagerSingleton()
         {
         }
 
-        private SimpleSingleton()
+        private SimpleEagerSingleton()
         {
             Console.WriteLine("Constructing {0}.", this.GetType().Name);
         }
 
-        public static SimpleSingleton Instance
+        public static SimpleEagerSingleton Instance
         {
             get
             {

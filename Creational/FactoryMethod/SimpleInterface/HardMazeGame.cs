@@ -1,0 +1,13 @@
+﻿namespace FactoryMethod.SimpleInterface
+{
+    /// <summary>
+    /// A Concrete Creator "Factory" - The Real Factory
+    /// </summary>
+    internal class HardMazeGame : MazeGame
+    {
+        public override IMaze CreateMaze()
+        {
+            return new HardMaze();
+        }
+    }
+}

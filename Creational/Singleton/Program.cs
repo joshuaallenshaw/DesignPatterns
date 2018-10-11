@@ -14,13 +14,13 @@ namespace Singleton
             );
             Console.WriteLine("\n");
             Parallel.Invoke(
-                () => Console.WriteLine("Instance 1 of {0} Hash Code: {1}", SimpleSingleton.Instance.GetHashCode(), "SimpleSingleton"),
-                () => Console.WriteLine("Instance 2 of {0} Hash Code: {1}", SimpleSingleton.Instance.GetHashCode(), "SimpleSingleton")
+                () => Console.WriteLine("Instance 1 of {0} Hash Code: {1}", SimpleEagerSingleton.Instance.GetHashCode(), "SimpleEagerSingleton"),
+                () => Console.WriteLine("Instance 2 of {0} Hash Code: {1}", SimpleEagerSingleton.Instance.GetHashCode(), "SimpleEagerSingleton")
             );
             Console.WriteLine("\n");
             Parallel.Invoke(
-                () => Console.WriteLine("Instance 1 of {0} Hash Code: {1}", DoublecheckSingleton.Instance.GetHashCode(), "DoublecheckSingleton"),
-                () => Console.WriteLine("Instance 2 of {0} Hash Code: {1}", DoublecheckSingleton.Instance.GetHashCode(), "DoublecheckSingleton")
+                () => Console.WriteLine("Instance 1 of {0} Hash Code: {1}", DoublecheckLazySingleton.Instance.GetHashCode(), "DoublecheckLazySingleton"),
+                () => Console.WriteLine("Instance 2 of {0} Hash Code: {1}", DoublecheckLazySingleton.Instance.GetHashCode(), "DoublecheckLazySingleton")
             );
             Console.WriteLine("\n");
             Parallel.Invoke(

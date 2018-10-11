@@ -1,1 +1,9 @@
-CSharp Design Patterns
+# CSharp Design Patterns
+
+## Rationale
+Design patterns are an important part of the CSharp developement. Most professional developers have them memorized.  I am more of a hobbiest, so I do not have them all memoried. There are design pattern posts, videos, and guides everywhere on the web, many of which are wrong or outdated.  I found myself getting frustrated with the google results, trying to find what I needed.  To solve this, I decided to put together my own collection of design pattern.
+
+## Audience
+I suspect this will be most useful for learning or hobbiest like myself.  The professional community likely can write the code in less time than it takes to find this repository.  That said, feel free to use as you see fit. Comments and suggestions are welcome.
+
+[Visit my Blog](https://www.joshuaallenshaw.com/KISS/)
