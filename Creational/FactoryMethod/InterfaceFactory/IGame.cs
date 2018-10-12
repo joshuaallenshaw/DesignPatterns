@@ -1,9 +1,9 @@
-namespace FactoryMethod.SimpleInterface
+namespace FactoryMethod.InterfaceFactory
 {
     /// <summary>
     /// The Interface Product
     /// </summary>
-    internal interface IMaze
+    internal interface IGame
     {
         void Announce();
     }

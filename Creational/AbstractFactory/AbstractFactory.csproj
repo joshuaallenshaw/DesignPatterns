@@ -12,6 +12,21 @@
     <AssemblyName>AbstractFactory</AssemblyName>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <Optimize>false</Optimize>
@@ -34,15 +49,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs" />
-    <Compile Include="IButton.cs" />
-    <Compile Include="IGuiFactory.cs" />
-    <Compile Include="OsxButton.cs" />
-    <Compile Include="OsxFactory.cs" />
-    <Compile Include="ApplicationRunner.cs" />
+    <Compile Include="InheritanceFactory\EasyCard.cs" />
+    <Compile Include="InheritanceFactory\EasyGameFactory.cs" />
+    <Compile Include="InheritanceFactory\EasyMaze.cs" />
+    <Compile Include="InheritanceFactory\Game.cs" />
+    <Compile Include="InheritanceFactory\GameFactory.cs" />
+    <Compile Include="InheritanceFactory\HardCard.cs" />
+    <Compile Include="InheritanceFactory\HardGameFactory.cs" />
+    <Compile Include="InheritanceFactory\HardMaze.cs" />
+    <Compile Include="InterfaceFactory\EasyCard.cs" />
+    <Compile Include="InterfaceFactory\EasyGameFactory.cs" />
+    <Compile Include="InterfaceFactory\EasyMaze.cs" />
+    <Compile Include="InterfaceFactory\GameFactory.cs" />
+    <Compile Include="InterfaceFactory\HardCard.cs" />
+    <Compile Include="InterfaceFactory\HardGameFactory.cs" />
+    <Compile Include="InterfaceFactory\HardMaze.cs" />
+    <Compile Include="InterfaceFactory\IGame.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WinButton.cs" />
-    <Compile Include="WinFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

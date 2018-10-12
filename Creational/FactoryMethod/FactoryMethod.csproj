@@ -33,20 +33,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SimpleInheritance\EasyMaze.cs" />
-    <Compile Include="SimpleInheritance\EasyMazeGame.cs" />
-    <Compile Include="SimpleInheritance\HardMaze.cs" />
-    <Compile Include="SimpleInheritance\HardMazeGame.cs" />
-    <Compile Include="SimpleInheritance\Maze.cs" />
-    <Compile Include="SimpleInheritance\MazeGame.cs" />
+    <Compile Include="InheritanceFactory\EasyCard.cs" />
+    <Compile Include="InheritanceFactory\EasyMaze.cs" />
+    <Compile Include="InheritanceFactory\Game.cs" />
+    <Compile Include="InheritanceFactory\GameFactory.cs" />
+    <Compile Include="InterfaceFactory\EasyCard.cs" />
+    <Compile Include="InterfaceFactory\GameFactory.cs" />
+    <Compile Include="InterfaceFactory\IGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleInterface\EasyMaze.cs" />
-    <Compile Include="SimpleInterface\EasyMazeGame.cs" />
-    <Compile Include="SimpleInterface\HardMaze.cs" />
-    <Compile Include="SimpleInterface\HardMazeGame.cs" />
-    <Compile Include="SimpleInterface\Maze.cs" />
-    <Compile Include="SimpleInterface\MazeGame.cs" />
+    <Compile Include="InterfaceFactory\EasyMaze.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

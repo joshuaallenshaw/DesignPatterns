@@ -9,18 +9,17 @@ namespace FactoryMethod
         /// </summary>
         private static void ExecuteSimpleInheritanceExample()
         {
-            Console.WriteLine("A Simple Inheritance version of a factory Method Example.");
+            Console.WriteLine("A Inheritance version of a factory Method Example.");
             // Createa some simple Factories
-            SimpleInheritance.MazeGame easyMazeFactory1 = new SimpleInheritance.EasyMazeGame();
-            SimpleInheritance.MazeGame hardMazeFactory1 = new SimpleInheritance.HardMazeGame();
+            InheritanceFactory.GameFactory gameFactory = new InheritanceFactory.GameFactory();
 
             // Create some mazes
-            SimpleInheritance.Maze easyMaze1 = easyMazeFactory1.CreateMaze();
-            SimpleInheritance.Maze hardMaze1 = hardMazeFactory1.CreateMaze();
+            InheritanceFactory.Game easyMaze = gameFactory.CreateGame("maze");
+            InheritanceFactory.Game easyCard = gameFactory.CreateGame("card");
 
             // Use the Announce Method
-            easyMaze1.Announce();
-            hardMaze1.Announce();
+            easyMaze.AnnounceWinner();
+            easyCard.AnnounceWinner();
         }
 
         /// <summary>
@@ -29,18 +28,17 @@ namespace FactoryMethod
         private static void ExecuteSimpleInterfaceExample()
         {
             Console.WriteLine("\n");
-            Console.WriteLine("A Simple Interface version of a factory Method Example.");
+            Console.WriteLine("A Interface version of a factory Method Example.");
             // Createa some simple Factories
-            SimpleInterface.MazeGame easyMazeFactory2 = new SimpleInterface.EasyMazeGame();
-            SimpleInterface.MazeGame hardMazeFactory2 = new SimpleInterface.HardMazeGame();
+            InterfaceFactory.GameFactory gameFactory = new InterfaceFactory.GameFactory();
 
             // Create some mazes
-            SimpleInterface.IMaze easyMaze2 = easyMazeFactory2.CreateMaze();
-            SimpleInterface.IMaze hardMaze2 = hardMazeFactory2.CreateMaze();
+            InterfaceFactory.IGame easyMaze = gameFactory.CreateGame("maze");
+            InterfaceFactory.IGame easyCard = gameFactory.CreateGame("card");
 
             // Use the Announce Method
-            easyMaze2.Announce();
-            hardMaze2.Announce();
+            easyMaze.Announce();
+            easyCard.Announce();
         }
 
         private static void Main(string[] args)
