@@ -35,8 +35,8 @@ namespace AbstractFactory
             Console.WriteLine("\n");
             Console.WriteLine("A Interface version of a factory Method Example.");
             // Createa some simple Factories
-            InterfaceFactory.GameFactory easyGameFactory = new InterfaceFactory.EasyGameFactory();
-            InterfaceFactory.GameFactory hardGameFactory = new InterfaceFactory.HardGameFactory();
+            InterfaceFactory.IGameFactory easyGameFactory = new InterfaceFactory.EasyGameFactory();
+            InterfaceFactory.IGameFactory hardGameFactory = new InterfaceFactory.HardGameFactory();
 
             // Create some games
             InterfaceFactory.IGame easyMaze = easyGameFactory.CreateGame("maze");

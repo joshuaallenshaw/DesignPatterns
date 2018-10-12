@@ -6,13 +6,8 @@ namespace AbstractFactory.InterfaceFactory
     /// The Abstract Creator "Factory" - Needed for the Factory Inheritance While this Factory is
     /// abstract, it is not an Abstract Factory Method
     /// </summary>
-    internal abstract class GameFactory
+    internal interface IGameFactory
     {
-        public GameFactory()
-        {
-            Console.WriteLine("The abstract factory is building a new factory.");
-        }
-
-        public abstract IGame CreateGame(string gameType);
+        IGame CreateGame(string gameType);
     }
 }
