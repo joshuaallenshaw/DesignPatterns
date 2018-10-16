@@ -1,6 +1,6 @@
 using System;
 
-namespace Builder
+namespace Builder.FluentAbstract
 {
     /// <summary>
     /// A Concrete Builder Class
@@ -14,24 +14,29 @@ namespace Builder
             SelectTopping("Salami");
         }
 
-        public override void AddSauce()
+        public override PizzaBuilder AddSauce()
         {
             Pizza.Sauce = "Hot";
+            return this;
         }
 
-        public override void AddToppings()
+        public override PizzaBuilder AddToppings()
         {
             Pizza.Toppings = Toppings;
+            return this;
         }
 
-        public override void BakePizza()
+        public override PizzaBuilder BakePizza()
+
         {
             Console.WriteLine("Pizza is Baked.");
+            return this;
         }
 
-        public override void PrepareDough()
+        public override PizzaBuilder PrepareDough()
         {
             Pizza.Dough = "Pan";
+            return this;
         }
     }
 }

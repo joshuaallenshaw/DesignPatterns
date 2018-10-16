@@ -1,11 +1,11 @@
-namespace Builder
+namespace Builder.SimpleInterface
 {
     /// <summary>
     /// The Director Class
     /// </summary>
     internal class Cook
     {
-        private PizzaBuilder pizzaBuilder;
+        private IPizzaBuilder pizzaBuilder;
 
         public void ConstructPizza()
         {
@@ -15,7 +15,7 @@ namespace Builder
             pizzaBuilder.BakePizza();
         }
 
-        public void SetPizzaBuilder(PizzaBuilder pb)
+        public void SetPizzaBuilder(IPizzaBuilder pb)
         {
             pizzaBuilder = pb;
         }

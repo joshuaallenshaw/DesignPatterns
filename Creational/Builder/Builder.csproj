@@ -33,13 +33,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cook.cs" />
-    <Compile Include="HawaiianPizzaBuilder.cs" />
-    <Compile Include="Pizza.cs" />
-    <Compile Include="PizzaBuilder.cs" />
+    <Compile Include="FluentAbstract\Cook.cs" />
+    <Compile Include="FluentAbstract\HawaiianPizzaBuilder.cs" />
+    <Compile Include="FluentAbstract\Pizza.cs" />
+    <Compile Include="FluentAbstract\PizzaBuilder.cs" />
+    <Compile Include="FluentAbstract\SpicyPizzaBuilder.cs" />
+    <Compile Include="SimpleInterface\Cook.cs" />
+    <Compile Include="SimpleInterface\HawaiianPizzaBuilder.cs" />
+    <Compile Include="SimpleInterface\Pizza.cs" />
+    <Compile Include="SimpleInterface\PizzaBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpicyPizzaBuilder.cs" />
+    <Compile Include="SimpleInterface\SpicyPizzaBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

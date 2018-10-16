@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Builder
+namespace Builder.FluentAbstract
 {
     /// <summary>
     /// The Product Class
