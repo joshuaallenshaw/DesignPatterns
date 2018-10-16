@@ -1,17 +1,37 @@
-namespace Builder {
+using System;
 
-	class HawaiianPizzaBuilder : PizzaBuilder {
+namespace Builder
+{
+    /// <summary>
+    /// A Concrete Builder Class
+    /// </summary>
+    internal class HawaiianPizzaBuilder : PizzaBuilder
+    {
+        public HawaiianPizzaBuilder()
+        {
+            SelectTopping("Mozzarella Cheese");
+            SelectTopping("Pinapple");
+            SelectTopping("Ham");
+        }
 
-		public override void BuildDough() {
-			this.Pizza.Dough = "cross";
-		}
+        public override void AddSauce()
+        {
+            Pizza.Sauce = "mild";
+        }
 
-		public override void BuildSauce() {
-			this.Pizza.Sauce = "mild";
-		}
+        public override void AddToppings()
+        {
+            Pizza.Toppings = Toppings;
+        }
 
-		public override void BuildTopping() {
-			this.Pizza.Topping = "ham+pineapple";
-		}
-	}
+        public override void BakePizza()
+        {
+            Console.WriteLine("Pizza is Baked.");
+        }
+
+        public override void PrepareDough()
+        {
+            Pizza.Dough = "Hand-Tossed";
+        }
+    }
 }

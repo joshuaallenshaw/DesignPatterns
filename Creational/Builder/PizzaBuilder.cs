@@ -1,19 +1,44 @@
-namespace Builder {
+using System.Collections.Generic;
 
-	abstract class PizzaBuilder {
+namespace Builder
+{
+    /// <summary>
+    /// Builder Class An interface can be used here as well, if looser coupling is desired.
+    /// </summary>
+    internal abstract class PizzaBuilder
+    {
+        protected Pizza Pizza;
+        protected List<string> Toppings = new List<string>();
 
-		protected Pizza Pizza;
+        public PizzaBuilder()
+        {
+            Pizza = new Pizza();
+        }
 
-		public Pizza GetPizza() {
-			return this.Pizza;
-		}
+        public abstract void AddSauce();
 
-		public void CreateNewPizzaProduct() {
-			this.Pizza = new Pizza();
-		}
+        public abstract void AddToppings();
 
-		public abstract void BuildDough();
-		public abstract void BuildSauce();
-		public abstract void BuildTopping();
-	}
+        public abstract void BakePizza();
+
+        /// <summary>
+        /// Returne the Built Object
+        /// </summary>
+        /// <returns></returns>
+        public Pizza GetPizza()
+        {
+            return Pizza;
+        }
+
+        public abstract void PrepareDough();
+
+        /// <summary>
+        /// The idea behind a builder design is to simplify paramater intake into steps
+        /// </summary>
+        /// <param name="topping"></param>
+        public void SelectTopping(string topping)
+        {
+            Toppings.Add(topping);
+        }
+    }
 }

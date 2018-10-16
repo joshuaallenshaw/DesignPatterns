@@ -1,22 +1,23 @@
-namespace Builder {
+namespace Builder
+{
+    /// <summary>
+    /// The Director Class
+    /// </summary>
+    internal class Cook
+    {
+        private PizzaBuilder pizzaBuilder;
 
-	class Cook {
+        public void ConstructPizza()
+        {
+            pizzaBuilder.PrepareDough();
+            pizzaBuilder.AddSauce();
+            pizzaBuilder.AddToppings();
+            pizzaBuilder.BakePizza();
+        }
 
-		private PizzaBuilder _pizzaBuilder;
-
-		public void SetPizzaBuilder(PizzaBuilder pb) {
-			this._pizzaBuilder = pb;
-		}
-
-		public Pizza GetPizza() {
-			return this._pizzaBuilder.GetPizza();
-		}
-
-		public void ConstructPizza() {
-			this._pizzaBuilder.CreateNewPizzaProduct();
-			this._pizzaBuilder.BuildDough();
-			this._pizzaBuilder.BuildSauce();
-			this._pizzaBuilder.BuildTopping();
-		}
-	}
+        public void SetPizzaBuilder(PizzaBuilder pb)
+        {
+            pizzaBuilder = pb;
+        }
+    }
 }

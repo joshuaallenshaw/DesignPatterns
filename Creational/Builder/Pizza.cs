@@ -1,36 +1,16 @@
-namespace Builder {
+using System.Collections.Generic;
 
-	public class Pizza {
+namespace Builder
+{
+    /// <summary>
+    /// The Product Class
+    /// </summary>
+    public class Pizza
+    {
+        public string Dough { get; set; } = string.Empty;
 
-		private string _dough = string.Empty;
-		private string _sauce = string.Empty;
-		private string _topping = string.Empty;
+        public string Sauce { get; set; } = string.Empty;
 
-		public string Dough {
-			get {
-				return this._dough;
-			}
-			set {
-				this._dough = value;
-			}
-		}
-
-		public string Sauce {
-			get {
-				return this._sauce;
-			}
-			set {
-				this._sauce = value;
-			}
-		}
-
-		public string Topping {
-			get {
-				return this._topping;
-			}
-			set {
-				this._topping = value;
-			}
-		}
-	}
+        public List<string> Toppings { get; set; } = new List<string>();
+    }
 }
