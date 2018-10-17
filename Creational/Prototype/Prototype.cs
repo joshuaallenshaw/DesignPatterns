@@ -1,17 +1,21 @@
 using System;
 
-namespace Prototype {
+namespace Prototype
+{
+    [Serializable]
+    internal abstract class Prototype : ICloneable
+    {
+        public abstract Descendant Descendant { get; set; }
 
-	abstract class Prototype : ICloneable {
+        public abstract int X { get; set; }
 
-		public abstract int X {
-			get;
-			set;
-		}
+        public abstract object Clone();
 
-		public abstract void PrintX();
+        public abstract void PrintValues();
 
-		public abstract object Clone();
-
-	}
+        public void SetXY(int value)
+        {
+            X = Descendant.Y = value;
+        }
+    }
 }
