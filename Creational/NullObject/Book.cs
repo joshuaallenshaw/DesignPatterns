@@ -1,17 +1,20 @@
 using System;
 
-namespace NullObject {
-
-    public class Book : AbstractBook {
-
-        public Book(string title) {
+namespace NullObject
+{
+    /// <summary>
+    /// The Object class that will be returned.
+    /// </summary>
+    public class Book : AbstractBook
+    {
+        public Book(string title)
+        {
             this.title = title;
         }
 
-        public override string GetTitle() {
+        public override string GetTitle()
+        {
             return title;
         }
-
     }
-
 }
