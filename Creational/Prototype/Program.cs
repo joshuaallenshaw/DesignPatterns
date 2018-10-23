@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* GoF Prototype Pattern
+ * Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+ */
+
+using System;
 
 namespace Prototype
 {

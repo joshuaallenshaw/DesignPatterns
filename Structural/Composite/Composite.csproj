@@ -34,8 +34,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompositeGraphic.cs" />
-    <Compile Include="Ellipse.cs" />
-    <Compile Include="IGraphic.cs" />
+    <Compile Include="IItem.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

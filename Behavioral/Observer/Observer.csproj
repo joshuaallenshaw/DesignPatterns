@@ -36,11 +36,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
     <Compile Include="ConcreteObserver.cs" />
     <Compile Include="ConcreteSubject.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="ISubject.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

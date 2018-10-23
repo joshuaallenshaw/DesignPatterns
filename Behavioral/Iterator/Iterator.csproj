@@ -33,11 +33,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs" />
     <Compile Include="ConcreateAggregate.cs" />
     <Compile Include="ConcreteIterator.cs" />
     <Compile Include="IAggregate.cs" />
     <Compile Include="IIterator.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

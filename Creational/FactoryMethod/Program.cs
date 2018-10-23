@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* GoF Factory Method Pattern
+ * Define an interface for creating an object, but let the subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
+ */
+
+using System;
 
 namespace FactoryMethod
 {

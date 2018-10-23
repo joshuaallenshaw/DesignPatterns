@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* GoF Abstract Factory Pattern
+ * Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+*/
+
+using System;
 
 namespace AbstractFactory
 {

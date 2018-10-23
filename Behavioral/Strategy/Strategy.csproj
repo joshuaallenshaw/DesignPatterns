@@ -39,8 +39,8 @@
     <Compile Include="AddStrategy.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="IStrategy.cs" />
-    <Compile Include="Client.cs" />
     <Compile Include="MultiplyStrategy.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubstractStrategy.cs" />
   </ItemGroup>

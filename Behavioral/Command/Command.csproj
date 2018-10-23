@@ -39,7 +39,7 @@
     <Compile Include="ConcreteCommand.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="Invoker.cs" />
-    <Compile Include="Client.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receiver.cs" />
   </ItemGroup>

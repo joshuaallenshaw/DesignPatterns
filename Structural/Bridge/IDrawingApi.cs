@@ -1,8 +1,10 @@
-namespace Bridge {
-	
-	interface IDrawingApi {
-
-		void DrawCircle(double x, double y, double radius);
-
-	}
+namespace Bridge
+{
+    /// <summary>
+    /// The Bridge
+    /// </summary>
+    internal interface IDrawingApi
+    {
+        void DrawCircle(double x, double y, double radius);
+    }
 }

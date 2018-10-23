@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/* GoF Adapter Patten
+ * Convert the interface of a class into another interface clients expect. Adapter lets classes work
+ * together that couldn’t otherwise because of incompatibility interfaces.
+ */
 
-namespace Adapter {
-	class Program {
+using System;
 
-		static void Main(string[] args) {
-			ITarget target = new Adapter(new Adaptee());
-			target.Request();
+namespace Adapter
+{
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            ITarget target = new Adapter(new Adaptee());
+            target.Request();
 
-			Console.ReadLine();
-		}
-	}
+            Console.ReadLine();
+        }
+    }
 }

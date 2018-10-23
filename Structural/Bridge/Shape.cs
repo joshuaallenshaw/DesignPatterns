@@ -1,16 +1,19 @@
-namespace Bridge {
+namespace Bridge
+{
+    /// <summary>
+    /// The Abstraction class
+    /// </summary>
+    internal abstract class Shape
+    {
+        protected IDrawingApi DrawingApi;
 
-	abstract class Shape {
+        protected Shape(IDrawingApi drawingApi)
+        {
+            DrawingApi = drawingApi;
+        }
 
-		protected IDrawingApi DrawingApi;
+        public abstract void Draw();
 
-		protected Shape(IDrawingApi drawingApi) {
-			this.DrawingApi = drawingApi;
-		}
-
-		public abstract void Draw();
-
-		public abstract void ResizeByPercent(double percent);
-
-	}
+        public abstract void ResizeByPercent(double percent);
+    }
 }

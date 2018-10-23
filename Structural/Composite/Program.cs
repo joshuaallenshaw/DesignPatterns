@@ -1,31 +1,40 @@
-﻿using System;
+﻿/* GoF Composit Pattern
+ * Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+ */
 
-namespace Composite {
-	
-	class Program {
+using System;
 
-		static void Main(string[] args) {
-			var ellipse1 = new Ellipse();
-			var ellipse2 = new Ellipse();
-			var ellipse3 = new Ellipse();
-			var ellipse4 = new Ellipse();
+namespace Composite
+{
+    /// <summary>
+    /// The composite Pattern
+    /// </summary>
+    internal class Program
+    {
+        private static void Main(string[] args)
+        {
+            var item1 = new Item("Item 1");
+            var item2 = new Item("Item 2");
 
-			var graphic = new CompositeGraphic();
-			var graphic1 = new CompositeGraphic();
-			var graphic2 = new CompositeGraphic();
+            var compositeItem1 = new CompositeItem("Composite Item 1");
 
-			graphic1.Add(ellipse1);
-			graphic1.Add(ellipse2);
-			graphic1.Add(ellipse3);
-						
-			graphic2.Add(ellipse4);
+            compositeItem1.Add(item1);
+            compositeItem1.Add(item2);
 
-			graphic.Add(graphic1);
-			graphic.Add(graphic2);
+            var item3 = new Item("Item 3");
+            var item4 = new Item("Item 4");
 
-			graphic.Print();
+            var compositeItem2 = new CompositeItem("Composite Item 2");
 
-			Console.ReadKey();
-		}
-	}
+            compositeItem2.Add(item3);
+            compositeItem2.Add(item4);
+
+            // CompositeItem is of type IItem too, so it can be nested
+            compositeItem1.Add(compositeItem2);
+
+            compositeItem1.Print();
+
+            Console.ReadKey();
+        }
+    }
 }

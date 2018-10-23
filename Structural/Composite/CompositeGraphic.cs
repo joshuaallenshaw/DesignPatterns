@@ -1,24 +1,39 @@
+using System;
 using System.Collections.Generic;
 
-namespace Composite {
+namespace Composite
+{
+    /// <summary>
+    /// Composite class
+    /// </summary>
+    internal class CompositeItem : IItem
+    {
+        private readonly IList<IItem> childGraphics = new List<IItem>();
 
-	class CompositeGraphic : IGraphic {
+        public CompositeItem(string name)
+        {
+            Name = name;
+        }
 
-		private readonly IList<IGraphic> _childGraphics = new List<IGraphic>();
+        public string Name { get; set; }
 
-		public void Print() {
-			foreach (var childGraphic in this._childGraphics) {
-				childGraphic.Print();
-			}
-		}
+        public void Add(IItem graphic)
+        {
+            childGraphics.Add(graphic);
+        }
 
-		public void Add(IGraphic graphic) {
-			this._childGraphics.Add(graphic);
-		}
+        public void Print(int indent = 0)
+        {
+            Console.WriteLine("{0}{1}", new String('-', indent), Name);
+            foreach (var childGraphic in childGraphics)
+            {
+                childGraphic.Print(indent + 1);
+            }
+        }
 
-		public void Remove(IGraphic graphic) {
-			this._childGraphics.Remove(graphic);
-		}
-
-	}
+        public void Remove(IItem graphic)
+        {
+            childGraphics.Remove(graphic);
+        }
+    }
 }
