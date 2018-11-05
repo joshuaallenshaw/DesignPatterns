@@ -13,12 +13,12 @@ namespace Flyweight
         private static readonly CoffeeFlavor[] Flavors = new CoffeeFlavor[100];
         private static readonly CoffeeOrderContext[] Tables = new CoffeeOrderContext[100];
 
-        private static CoffeeFlavorFactory _factory;
-        private static int _ordersMade;
+        private static CoffeeFlavorFactory factory;
+        private static int ordersMade;
 
         private static void Main(string[] args)
         {
-            _factory = new CoffeeFlavorFactory();
+            factory = new CoffeeFlavorFactory();
 
             TakeOrder("Cappuccino", 2);
             TakeOrder("Cappuccino", 2);
@@ -36,20 +36,20 @@ namespace Flyweight
             TakeOrder("Cappuccino", 121);
             TakeOrder("Xpresso", 121);
 
-            for (int i = 0; i < _ordersMade; i++)
+            for (int i = 0; i < ordersMade; i++)
             {
                 Flavors[i].ServeCoffee(Tables[i]);
             }
 
             Console.WriteLine();
-            Console.WriteLine("Total CoffeeFlavor objects made {0}", _factory.TotalFlaversMade);
+            Console.WriteLine("Total CoffeeFlavor objects made {0}", factory.TotalFlaversMade);
             Console.ReadKey();
         }
 
         private static void TakeOrder(string flaver, int table)
         {
-            Flavors[_ordersMade] = _factory.GetCoffeeFlavor(flaver);
-            Tables[_ordersMade++] = new CoffeeOrderContext(table);
+            Flavors[ordersMade] = factory.GetCoffeeFlavor(flaver);
+            Tables[ordersMade++] = new CoffeeOrderContext(table);
         }
     }
 }

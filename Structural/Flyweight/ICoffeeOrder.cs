@@ -1,8 +1,10 @@
-namespace Flyweight {
-
-	public interface ICoffeeOrder {
-
-		void ServeCoffee(CoffeeOrderContext context);
-
-	}
+namespace Flyweight
+{
+    /// <summary>
+    /// The Flyweight Interface
+    /// </summary>
+    public interface ICoffeeOrder
+    {
+        void ServeCoffee(CoffeeOrderContext context);
+    }
 }

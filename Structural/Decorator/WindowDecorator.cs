@@ -1,20 +1,25 @@
-namespace Decorator {
+namespace Decorator
+{
+    /// <summary>
+    /// The Abstract Decorator Class
+    /// </summary>
+    internal class WindowDecorator : IWindow
+    {
+        protected IWindow Window;
 
-	class WindowDecorator : IWindow {
-		
-		protected IWindow DecoratedWindow;
+        public WindowDecorator(IWindow window)
+        {
+            Window = window;
+        }
 
-		public WindowDecorator(IWindow decoratedWindow) {
-			this.DecoratedWindow = decoratedWindow;
-		}
+        public virtual void Draw()
+        {
+            Window.Draw();
+        }
 
-		public virtual void Draw() {
-			this.DecoratedWindow.Draw();
-		}
-
-		public virtual string GetDescription() {
-			return "Window decorator";
-		}
-
-	}
+        public virtual string GetDescription()
+        {
+            return "Window decorator";
+        }
+    }
 }

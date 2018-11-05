@@ -1,15 +1,15 @@
-namespace Flyweight {
+namespace Flyweight
+{
+    /// <summary>
+    /// The Flyweight client.
+    /// </summary>
+    public class CoffeeOrderContext
+    {
+        public CoffeeOrderContext(int tableNumber)
+        {
+            Table = tableNumber;
+        }
 
-	public class CoffeeOrderContext {
-
-		public int Table {
-			get;
-			private set;
-		}
-
-		public CoffeeOrderContext(int tableNumber) {
-			this.Table = tableNumber;
-		}
-
-	}
+        public int Table { get; private set; }
+    }
 }

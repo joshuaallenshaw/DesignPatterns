@@ -1,22 +1,28 @@
-namespace Decorator {
+namespace Decorator
+{
+    /// <summary>
+    /// The Concrete Decorator Class
+    /// </summary>
+    internal class VerticalScrollbarWindow : WindowDecorator
+    {
+        public VerticalScrollbarWindow(IWindow window) : base(window)
+        {
+        }
 
-	class VerticalScrollbarWindow : WindowDecorator {
+        public override void Draw()
+        {
+            base.Draw();
+            this.DrawVerticalScrollbar();
+        }
 
-		public VerticalScrollbarWindow(IWindow decoratedWindow) : base(decoratedWindow) {
-		}
+        public override string GetDescription()
+        {
+            return this.Window.GetDescription() + ", include vertical scrollbars";
+        }
 
-		public override void Draw() {
-			base.Draw();
-			this.DrawVerticalScrollbar();
-		}
-
-		private void DrawVerticalScrollbar() {
-			//
-		}
-
-		public override string GetDescription() {
-			return this.DecoratedWindow.GetDescription() + ", include vertical scrollbars";
-		}
-
-	}
+        private void DrawVerticalScrollbar()
+        {
+            //
+        }
+    }
 }
