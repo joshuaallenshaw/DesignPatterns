@@ -1,20 +1,17 @@
-﻿namespace ChainOfResponsibility {
+﻿namespace ChainOfResponsibility
+{
+    /// <summary>
+    /// The Handler class.
+    /// </summary>
+    public abstract class Handler
+    {
+        protected Handler(Handler successor)
+        {
+            Successor = successor;
+        }
 
-	public abstract class Handler {
+        protected Handler Successor { get; }
 
-		private readonly Handler _successor;
-
-		protected Handler(Handler successor) {
-			this._successor = successor;
-		}
-
-		protected Handler Successor {
-			get {
-				return this._successor;
-			}
-		}
-
-		public abstract void HandleRequest(Request request);
-
-	}
+        public abstract void HandleRequest(Request request);
+    }
 }

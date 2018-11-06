@@ -1,11 +1,23 @@
-﻿namespace ChainOfResponsibility {
+﻿namespace ChainOfResponsibility
+{
+    /// <summary>
+    /// A Concrete Handled Class
+    /// </summary>
+    public class ConcreteRequest1 : Request
+    {
+    }
 
-	public abstract class Request {
-	}
+    /// <summary>
+    /// A Concrete Handled Class
+    /// </summary>
+    public class ConcreteRequest2 : Request
+    {
+    }
 
-	public class ConcreteRequest1 : Request {
-	}
-
-	public class ConcreteRequest2 : Request {
-	}
+    /// <summary>
+    /// The Absctract Handled Class
+    /// </summary>
+    public abstract class Request
+    {
+    }
 }

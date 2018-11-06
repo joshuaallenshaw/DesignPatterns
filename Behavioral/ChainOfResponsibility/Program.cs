@@ -9,6 +9,10 @@ namespace ChainOfResponsibility
 {
     internal class Program
     {
+        /// <summary>
+        /// The Client
+        /// </summary>
+        /// <param name="args"></param>
         private static void Main(string[] args)
         {
             Handler handlerChain = new ConcreteHandler1(new ConcreteHandler2(null));
