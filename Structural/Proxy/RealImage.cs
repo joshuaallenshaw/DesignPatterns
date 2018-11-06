@@ -1,23 +1,28 @@
 using System;
 
-namespace Proxy {
+namespace Proxy
+{
+    /// <summary>
+    /// The Real Subject Class.
+    /// </summary>
+    public class RealImage : IImage
+    {
+        private readonly string fileName;
 
-	public class RealImage : IImage {
+        public RealImage(string fileName)
+        {
+            this.fileName = fileName;
+            LoadImageFromFile();
+        }
 
-		private readonly string _fileName;
+        public void DisplayImage()
+        {
+            Console.WriteLine("Displaying image {0}", fileName);
+        }
 
-		public RealImage(string fileName) {
-			this._fileName = fileName;
-			this.LoadImageFromFile();
-		}
-
-		private void LoadImageFromFile() {
-			Console.WriteLine("Load image from file {0}", this._fileName);
-		}
-
-		public void DisplayImage() {
-			Console.WriteLine("Displaying image {0}", this._fileName);
-		}
-
-	}
+        private void LoadImageFromFile()
+        {
+            Console.WriteLine("Load image from file {0}", fileName);
+        }
+    }
 }

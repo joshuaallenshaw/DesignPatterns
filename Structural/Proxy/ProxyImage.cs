@@ -1,19 +1,25 @@
-namespace Proxy {
+namespace Proxy
+{
+    /// <summary>
+    /// The Proxy Subject Class.
+    /// </summary>
+    public class ProxyImage : IImage
+    {
+        private readonly string fileName;
+        private RealImage realImage;
 
-	public class ProxyImage : IImage {
+        public ProxyImage(string fileName)
+        {
+            this.fileName = fileName;
+        }
 
-		private RealImage _realImage;
-		private readonly string _fileName;
-
-		public ProxyImage(string fileName) {
-			this._fileName = fileName;
-		}
-
-		public void DisplayImage() {
-			if (this._realImage == null) {
-				this._realImage = new RealImage(this._fileName);
-			}
-			this._realImage.DisplayImage();
-		}
-	}
+        public void DisplayImage()
+        {
+            if (realImage == null)
+            {
+                realImage = new RealImage(fileName);
+            }
+            realImage.DisplayImage();
+        }
+    }
 }
