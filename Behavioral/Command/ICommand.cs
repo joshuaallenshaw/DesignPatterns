@@ -1,8 +1,10 @@
-﻿namespace Command {
-
-	public interface ICommand {
-
-		void Execute();
-
-	}
+﻿namespace Command
+{
+    /// <summary>
+    /// The Command Interface
+    /// </summary>
+    public interface ICommand
+    {
+        void Execute();
+    }
 }

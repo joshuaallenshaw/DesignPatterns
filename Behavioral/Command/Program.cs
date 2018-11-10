@@ -6,6 +6,9 @@ using System;
 
 namespace Command
 {
+    /// <summary>
+    /// The Client Class
+    /// </summary>
     internal class Program
     {
         private static void Main(string[] args)
@@ -13,9 +16,15 @@ namespace Command
             var invoker = new Invoker();
 
             var receiver = new Receiver();
-            ICommand command = new ConcreteCommand(receiver);
+            ICommand command1 = new CommandOne(receiver);
+            ICommand command2 = new CommandTwo(receiver);
+            ICommand command3 = new CommandThree(receiver);
 
-            invoker.InvokeCommand(command);
+            invoker.InvokeCommand(command1);
+            Console.WriteLine();
+            invoker.InvokeCommand(command2);
+            Console.WriteLine();
+            invoker.InvokeCommand(command3);
 
             Console.ReadKey();
         }

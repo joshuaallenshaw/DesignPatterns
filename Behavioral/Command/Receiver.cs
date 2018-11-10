@@ -1,12 +1,20 @@
 ﻿using System;
 
-namespace Command {
-	
-	public class Receiver {
-		
-		public void Action() {
-			Console.WriteLine("Receiver Action.");
-		}
+namespace Command
+{
+    /// <summary>
+    /// The reciever Class
+    /// </summary>
+    public class Receiver
+    {
+        public void ActionOne()
+        {
+            Console.WriteLine("Receiver Action One.");
+        }
 
-	}
+        public void ActionTwo()
+        {
+            Console.WriteLine("Receiver Action Two.");
+        }
+    }
 }
